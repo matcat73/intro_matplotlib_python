@@ -37,13 +37,22 @@ if __name__ == '__main__':
 
     # Alumno: Realizar un gráfico que representen las dos funciones
     # Para ello se debe llamar dos veces a "plot" con el mismo "ax"
+    fig = plt.figure()
+    fig.suptitle("Dos funciones en un gráfico")
+    ax = fig.add_subplot()
+    ax.plot(y1, label='y = x**2')
+    ax.plot(y2, label='y = x**3')
 
     # Se debe colocar en la leyenda la función que representa
     # cada función
+    ax.legend()
 
     # Cada función dibujarla con un color distinto
     # a su elección
+    ax.plot(y1, c='g')
+    ax.plot(y2, c='b')
+
 
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")

@@ -29,10 +29,16 @@ if __name__ == '__main__':
 
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    ax.plot(x,y)
 
     # Alumno: Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
-
+    ax.set_title("FUNCIÓN CUADRADO DE X")
+    ax.set_ylabel("Y = X**2")
+    ax.set_xlabel("Valor de X")
+    ax.plot(x, y, c='g')
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")
